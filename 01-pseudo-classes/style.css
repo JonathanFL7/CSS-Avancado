@@ -1,27 +1,36 @@
-seletor:pseudo-classe {
+/* seletor:pseudo-classe {
     propriedade: valor;
-}
-/* 
-p:first-child {
-    color: aqua;
-}
+} */
 
-p:last-child {
+/* Estiliza o primeiro elemento filho dentro do seu elemento pai */
+
+.p1:first-child {
     color: blue;
 }
 
-p:not(.padrao){
+/* Estiliza o último elemento filho dentro do seu elemento pai */
+
+.p2:last-child {
+    color: blue;
+}
+
+/* Estiliza elementos <p> que não possuem a classe "padrao" */
+
+.p4:not(.padrao) {
     color: coral;
-} */
+}
 
-/* li:nth-child(n+2):nth-child(-n+5){
-    color: red;
-} */
-
-li:nth-last-child(1){
+/* Esta regra estiliza elementos <li> que são entre o segundo e o quinto elemento da lista. */
+li:nth-child(n+2):nth-child(-n+5) {
     color: red;
 }
 
-p:only-child {
-    color: red;
+/* Esta regra estiliza o último elemento filho dentro do seu elemento pai */
+li:nth-last-child(1) {
+    color: green;
+}
+
+/* Esta regra estiliza elementos <p> que são filhos únicos, ou seja, não possuem irmãos dentro do mesmo elemento pai. */
+.p3:only-child {
+    color: blue;
 }

@@ -1,0 +1,44 @@
+/* seletor::pseudo-elemento{
+    propriedade: valor;
+} */
+
+
+/* Não funciona com elementos display inline, podemos usar classes, id, elementos, basicamente um seletor, selecionar */
+
+/* Primeira Letra */
+.first-letter::first-letter {
+    color: red;
+}
+
+/* Primeira Linha + Primeira Letra */
+.first-line::first-line {
+    color: darkcyan;
+}
+
+.first-line::first-letter {
+    color: red;
+}
+
+/* Estlizar marcadores de uma lista */
+
+li::marker {
+    color: red;
+    font-size: 23px;
+}
+
+/* ::Before é estar colocando o conteudo sempre antes deles, o content: url() é aonde vamos definir qual conteudo vai ser inserido na pagina, podemos por palavras também! content: "texto" */
+.before::before {
+    content: "";
+    background: url(logo.png) center center no-repeat;
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+}
+
+/* ::After é o mesmo que before mas mudando a direção, será sempre colocando o conteudo depois deles.  */
+
+.after::after{
+    content: url(logo.png);
+}
+
+/* Usar o Pseudo-elementos no CSS para inserir conteudos ou estilizar letras ou linhas do HTML pelo CSS diretamente  */

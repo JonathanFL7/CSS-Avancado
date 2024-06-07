@@ -1,0 +1,40 @@
+/* Digamos que queremos por um tamanho de fonte e uma cor igual a todos os elementos que criamos*/
+/* Com isso precisamos de uma variavel global, caso queria mudar uma variavel iremos mudar somente aqui, facilitando o trabalho */
+
+:root{
+    --cor-padrao: green;
+    --tamanho-de-fonte-padrao:20px;
+}
+
+/* Esse root é a nossa raiz do documento, deve-se estar no topo para facilitar o acesso, E no caso a raiz do HTML, aqui dentro criamos as variaveis comecando com -- */
+
+/* Agora iremos adicionar, utilizando 
+"var(variavel), Segunda opção caso de problema" como um Fallback*/
+
+/* Conteudo também teremos uma variavel local no h2, diferente da variavel global acima. */
+
+h2{
+    --cor-padrao: coral;
+    --cor-de-fundo: lightgreen;
+    
+    color: var(--cor-padrao, green);
+    font-size: var(--tamanho-de-fonte-padrao);
+    background-color: var(--cor-de-fundo);
+}
+
+h3{
+    color: var(--cor-padrao, blue);
+    font-size: var(--tamanho-de-fonte-padrao);
+}
+
+p{
+    color: var(--cor-padrao, blue);
+    font-size: var(--tamanho-de-fonte-padrao);
+}
+
+span{
+    color: var(--cor-padrao, blue);
+    font-size: var(--tamanho-de-fonte-padrao);
+}
+
+/* Consultar navegadores que são compativeis com variaveis, https://www.w3schools.com/css/css3_variables.asp */

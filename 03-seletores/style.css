@@ -1,0 +1,86 @@
+h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+}
+
+
+/* Seletores são padrões do CSS que usamos para selecionar qual elemento no HTML queremos estilizar, Ao colocar um seletor ele vai estilizar todos os elementos HTML com esse seletor*/
+
+h1 {
+    color: green;
+}
+
+.paragrafo {
+    color: blue;
+}
+
+
+/* O ideal é usar um ID por pagina, não podemos usar o mesmo ID para outras coisas, não é recomendado para estilização, sendo recomendado para interações de javascript */
+#menu {
+    margin-left: 100px;
+    text-decoration: underline;
+}
+
+/* Estilização GERAL com * (Todos os elementos da pagina) usado no estilos do reset.css para resetar todas as propriedades dos elementos da pagina*/
+
+* {
+    padding: 0;
+    font-size: 20px;
+}
+
+/* Estilizando elementos com DUAS classes, para se ter duas classes não podemos deixa-las juntas: "titulo-laranja" e sim "titulo laranja" */
+
+/* Como temos a classe titulo em ambos, iremos apenas dar uma propriedade para os dois sem repetir os codigos: */
+
+.titulo {
+    font-size: 30px;
+}
+
+.titulo.laranja {
+    color: orange;
+}
+
+.titulo.vermelho {
+    color: red;
+}
+
+/* Podemos estilizar varios seletores, literalmente qualquer seletor ao mesmo tempo com a mesma regra: */
+/* Os Dois estão sendo estilizado graça a virgula*/
+.p, .span {
+    font-size: 10px;
+    color: blue;
+}
+
+/* Caso usemos separados a classes, terá que ter uma classe filha dentro de uma classe pai*/
+
+/* pai / filha / Usado para estilizar o filho  */
+.sobre .texto {
+    color: palevioletred;
+}
+
+
+/* Usando o Seletor sinal de maior " > " vamos conseguir selecionar todos os filhos que estão no pai (seletor) como no exemplo abaixo será selecionado todos os P que está dentro do elemento div */
+
+div>p {
+    color: purple;
+}
+
+/* O seletor "div + p" é um seletor adjacente de irmãos, Ele aplica estilos ao elemento <p> que é imediatamente precedido por um elemento <div>.
+Apenas o parágrafo que vem logo após o <div> será estilizado. */
+
+div+p {
+    color: royalblue;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Estilização com tributo, pode ser qualquer valor desde que seja atributo, como por exemplo os atributos que dão a função de um link */
+a[target=_blank] {
+    color: red;
+    font-size: 24px;
+}
+
+a[href="google.com"] {
+    color: green;
+    font-size: 19px;
+    text-decoration: line-through;
+}

@@ -1,0 +1,20 @@
+
+img{
+    width: 200px;
+}
+
+
+/* Transform scale, podemos mudar a escala, tanto do X Horizontal ou Y Vertical */
+img.scale{
+    transform: scaleX(2);
+}
+
+/* Podemos rotacionar com transform rotate, e usar igualmente o X ou Y */
+img.rotate{
+    transform: rotate(20deg);
+}
+
+/* Ele vai fazer uma translação do elemento da tela 2D horizontalmente e verticalmente, basicamente mover o local dele, podemos também usar X ou Y */
+img.translate{
+    transform: translate(90px, 60px);
+}
